@@ -1,11 +1,11 @@
-# 🏗️ **مخطط هيكلة مشروع ERP متكامل بمعمارية CQRS (تفصيلي واحترافي مع الموديولات)**
+# 🏗️ **مخطط هيكلة مشروع ERP متكامل بمعمارية CQRS (تفصيلي واحترافي مع جميع الموديولات)**
 
 ---
 
 ## الجذر Root
-- [ ] **src/**  
+- **src/**  
     يحتوي جميع المشاريع الفرعية (Projects) بالنظام
-- [ ] **.editorconfig**, **.gitignore**  
+- **.editorconfig**, **.gitignore**  
     إعدادات المشروع العامة
 
 ---
@@ -26,22 +26,34 @@ src/
     │   ├─ Exceptions/
     │   └─ Interfaces/
     ├─ ERP/
-    │   ├─ Accounts/       # 🟢 Module: شجرة الحسابات والدليل المحاسبي
-    │   ├─ Journals/       # 🟢 Module: القيود اليومية
-    │   ├─ Invoices/       # 🟢 Module: الفواتير (مبيعات/مشتريات)
-    │   ├─ Customers/      # 🟢 Module: العملاء
-    │   ├─ Suppliers/      # 🟢 Module: الموردين
-    │   ├─ Products/       # 🟢 Module: الأصناف
-    │   ├─ Warehouses/     # 🟢 Module: المخازن
-    │   ├─ Sales/          # 🟢 Module: المبيعات
-    │   ├─ Purchases/      # 🟢 Module: المشتريات
-    │   ├─ HR/             # 🟢 Module: الموارد البشرية
-    │   ├─ Users/          # 🟢 Module: المستخدمون والصلاحيات
-    │   ├─ Settings/       # 🟢 Module: الإعدادات العامة
-    │   ├─ Notifications/  # 🟢 Module: الإشعارات
-    │   ├─ Reports/        # 🟢 Module: التقارير
-    │   ├─ Audit/          # 🟢 Module: التدقيق والسجلات
-    │   └─ ...             # أضف أي وحدات تخصصية أخرى هنا
+    │   ├─ Accounts/
+    │   ├─ Journals/
+    │   ├─ Invoices/
+    │   ├─ Customers/
+    │   ├─ Suppliers/
+    │   ├─ Products/
+    │   ├─ Warehouses/
+    │   ├─ Sales/
+    │   ├─ Purchases/
+    │   ├─ HR/
+    │   ├─ Users/
+    │   ├─ Settings/
+    │   ├─ Notifications/
+    │   ├─ Reports/
+    │   ├─ Audit/
+    │   ├─ Inventory/
+    │   ├─ FixedAssets/
+    │   ├─ Projects/
+    │   ├─ Contracts/
+    │   ├─ Loans/
+    │   ├─ Payroll/
+    │   ├─ Taxes/
+    │   ├─ Banking/
+    │   ├─ POS/
+    │   ├─ CRM/
+    │   ├─ ECommerce/
+    │   ├─ Manufacturing/
+    │   └─ ... (Modules تخصصية أخرى)
     └─ Domain.csproj
 ```
 
@@ -61,7 +73,7 @@ src/
     │   ├─ Configurations/
     │   ├─ Extensions/
     │   ├─ Mappings/
-    │   ├─ Responses/         # 🟡 فئات الاستجابة الموحدة مثل Result, ApiResponse, ErrorResponse
+    │   ├─ Responses/
     │   ├─ Serialization/
     │   ├─ Specifications/
     │   └─ Validators/
@@ -69,22 +81,34 @@ src/
     ├─ Enums/
     ├─ Exceptions/
     ├─ Features/
-    │   ├─ Accounts/         # 🟢 Module: شجرة الحسابات
-    │   ├─ Journals/         # 🟢 Module: القيود اليومية
-    │   ├─ Invoices/         # 🟢 Module: الفواتير
-    │   ├─ Customers/        # 🟢 Module: العملاء
-    │   ├─ Suppliers/        # 🟢 Module: الموردين
-    │   ├─ Products/         # 🟢 Module: الأصناف
-    │   ├─ Warehouses/       # 🟢 Module: المخازن
-    │   ├─ Sales/            # 🟢 Module: المبيعات
-    │   ├─ Purchases/        # 🟢 Module: المشتريات
-    │   ├─ HR/               # 🟢 Module: الموارد البشرية
-    │   ├─ Users/            # 🟢 Module: المستخدمون والصلاحيات
-    │   ├─ Settings/         # 🟢 Module: الإعدادات العامة
-    │   ├─ Notifications/    # 🟢 Module: الإشعارات
-    │   ├─ Reports/          # 🟢 Module: التقارير
-    │   ├─ Audit/            # 🟢 Module: التدقيق والسجلات
-    │   └─ ...               # أضف أي وحدات تخصصية أخرى هنا
+    │   ├─ Accounts/
+    │   ├─ Journals/
+    │   ├─ Invoices/
+    │   ├─ Customers/
+    │   ├─ Suppliers/
+    │   ├─ Products/
+    │   ├─ Warehouses/
+    │   ├─ Sales/
+    │   ├─ Purchases/
+    │   ├─ HR/
+    │   ├─ Users/
+    │   ├─ Settings/
+    │   ├─ Notifications/
+    │   ├─ Reports/
+    │   ├─ Audit/
+    │   ├─ Inventory/
+    │   ├─ FixedAssets/
+    │   ├─ Projects/
+    │   ├─ Contracts/
+    │   ├─ Loans/
+    │   ├─ Payroll/
+    │   ├─ Taxes/
+    │   ├─ Banking/
+    │   ├─ POS/
+    │   ├─ CRM/
+    │   ├─ ECommerce/
+    │   ├─ Manufacturing/
+    │   └─ ... (Modules تخصصية أخرى)
     ├─ Helper/
     └─ Application.csproj
 ```
@@ -101,16 +125,16 @@ src/
     │   ├─ Contexts/
     │   ├─ Migrations/
     │   ├─ Repositories/
-    │   │   ├─ AccountRepository.cs         # 🟢 لكل Module Repository خاص
+    │   │   ├─ AccountRepository.cs
     │   │   ├─ JournalRepository.cs
     │   │   ├─ InvoiceRepository.cs
-    │   │   └─ ...
+    │   │   ├─ ... (Repository لكل Module)
     │   └─ Seed/
     ├─ Identity/
     ├─ Services/
     │   ├─ Email/
     │   ├─ Sms/
-    │   └─ Files/
+    │   ├─ Files/
     ├─ External/
     │   ├─ PaymentGateways/
     │   ├─ ERPIntegrations/
@@ -145,14 +169,14 @@ src/
 src/
 └── Shared/
     ├─ Localization/
-    │   ├─ SystemMessages.ar.resx    # 🟡 رسائل النظام الموحدة (نجاح/خطأ/تحذير...) متعددة اللغات
+    │   ├─ SystemMessages.ar.resx
     │   └─ SystemMessages.en.resx
     ├─ Results/
-    │   ├─ Result.cs                 # 🟡 نتيجة العملية الموحدة (نجاح/فشل/بيانات/أخطاء)
-    │   ├─ ApiResponse.cs            # 🟡 استجابة الـAPI الموحدة
-    │   └─ ErrorResponse.cs          # 🟡 نموذج الخطأ الموحد
+    │   ├─ Result.cs
+    │   ├─ ApiResponse.cs
+    │   └─ ErrorResponse.cs
     ├─ DTOs/
-    │   ├─ PagedResultDto.cs         # 🟡 نتيجة التصفح الموحدة (Paging)
+    │   ├─ PagedResultDto.cs
     │   └─ ...
     ├─ Exceptions/
     ├─ Extensions/
@@ -170,9 +194,9 @@ src/
 src/
 └── Client/
     ├─ Pages/
-    │   ├─ Accounts/       # 🟢 Module: شجرة الحسابات
-    │   ├─ Journals/       # 🟢 Module: القيود اليومية
-    │   ├─ Invoices/       # 🟢 Module: الفواتير
+    │   ├─ Accounts/
+    │   ├─ Journals/
+    │   ├─ Invoices/
     │   ├─ Customers/
     │   ├─ Suppliers/
     │   ├─ Products/
@@ -185,12 +209,24 @@ src/
     │   ├─ Notifications/
     │   ├─ Reports/
     │   ├─ Audit/
-    │   └─ ...
+    │   ├─ Inventory/
+    │   ├─ FixedAssets/
+    │   ├─ Projects/
+    │   ├─ Contracts/
+    │   ├─ Loans/
+    │   ├─ Payroll/
+    │   ├─ Taxes/
+    │   ├─ Banking/
+    │   ├─ POS/
+    │   ├─ CRM/
+    │   ├─ ECommerce/
+    │   ├─ Manufacturing/
+    │   └─ ... (Modules تخصصية أخرى)
     ├─ Components/
     │   ├─ Accounts/
     │   ├─ Journals/
-    │   └─ ...             # لكل Module مكونات خاصة
-    │   └─ SystemMessage.razor  # 🟡 مكون عرض الرسائل الموحدة
+    │   └─ ...
+    │   └─ SystemMessage.razor
     ├─ Services/
     ├─ Extensions/
     ├─ Mappings/
@@ -213,7 +249,7 @@ src/
     ├─ Api/
     ├─ Auth/
     ├─ Services/
-    │   ├─ MessageService.cs         # 🟡 خدمة مركزية لإدارة رسائل النظام في الواجهة
+    │   ├─ MessageService.cs
     ├─ Storage/
     ├─ DependencyInjection/
     └─ Client.Infrastructure.csproj
@@ -228,7 +264,7 @@ src/
 src/
 └── Server/
     ├─ Controllers/
-    │   ├─ AccountsController.cs         # 🟢 لكل Module Controller خاص
+    │   ├─ AccountsController.cs
     │   ├─ JournalsController.cs
     │   ├─ InvoicesController.cs
     │   ├─ CustomersController.cs
@@ -243,10 +279,22 @@ src/
     │   ├─ NotificationsController.cs
     │   ├─ ReportsController.cs
     │   ├─ AuditController.cs
-    │   └─ ...
+    │   ├─ InventoryController.cs
+    │   ├─ FixedAssetsController.cs
+    │   ├─ ProjectsController.cs
+    │   ├─ ContractsController.cs
+    │   ├─ LoansController.cs
+    │   ├─ PayrollController.cs
+    │   ├─ TaxesController.cs
+    │   ├─ BankingController.cs
+    │   ├─ POSController.cs
+    │   ├─ CRMController.cs
+    │   ├─ ECommerceController.cs
+    │   ├─ ManufacturingController.cs
+    │   └─ ... (Modules تخصصية أخرى)
     ├─ Extensions/
     ├─ Filters/
-    │   ├─ ExceptionFilter.cs        # 🟡 فلتر موحد لمعالجة الأخطاء وإرجاع ErrorResponse
+    │   ├─ ExceptionFilter.cs
     ├─ Middlewares/
     ├─ DependencyInjection/
     ├─ Settings/
@@ -277,7 +325,7 @@ src/
 - **IRepository<T>, IUnitOfWork** (Domain/Interfaces, Infrastructure/Repositories)
 - **BaseRequest, BaseResponse, PaginationRequest, PaginationResponse** (Application/Common)
 - **Specifications** (Application/Common/Specifications)
-- **Localization/SystemMessages.[lang].resx** (Shared/Localization) 🟡 رسائل النظام الموحدة
+- **Localization/SystemMessages.[lang].resx** (Shared/Localization)
 - **ValidationAttributes, Validators** (Application/Common/Validators)
 - **Mapping Profiles** (Application/Common/Mappings)
 - **Behaviors: Logging, Caching, Validation, Performance** (Application/Behaviors)
@@ -290,7 +338,7 @@ src/
 
 ---
 
-# 🗂️ **قائمة جميع الموديولات (Modules):**
+# 🗂️ **قائمة جميع الموديولات (Modules) الموسعة:**
 - **Accounts** (الحسابات والدليل المحاسبي)
 - **Journals** (القيود اليومية)
 - **Invoices** (الفواتير)
@@ -306,6 +354,18 @@ src/
 - **Notifications** (الإشعارات)
 - **Reports** (التقارير)
 - **Audit & Logs** (التدقيق والسجلات)
+- **Inventory** (المخزون)
+- **FixedAssets** (الأصول الثابتة)
+- **Projects** (المشاريع)
+- **Contracts** (العقود)
+- **Loans** (القروض)
+- **Payroll** (الرواتب)
+- **Taxes** (الضرائب)
+- **Banking** (المصارف)
+- **POS** (نقاط البيع)
+- **CRM** (إدارة علاقات العملاء)
+- **ECommerce** (متاجر إلكترونية)
+- **Manufacturing** (التصنيع)
 - *(أضف أي Module تخصصي آخر لاحقاً)*
 
 ---
@@ -319,4 +379,4 @@ src/
 
 ---
 
-**هذا المخطط يضمن لك مشروع ERP قابل للتوسع، منظم بوضوح، يدعم أي إضافة أو صيانة مستقبلية باحترافية عالية.**
+**هذا المخطط الموسع يضمن لك مشروع ERP قابل للتوسع، منظم بوضوح، يدعم أي إضافة أو صيانة مستقبلية باحترافية عالية.**
